@@ -2,7 +2,7 @@
 //file:noinspection GroovyAccessibility
 //file:noinspection GrUnresolvedAccess
 plugins {
-    id 'net.fabricmc.fabric-loom' version '1.17.19'
+    id 'net.fabricmc.fabric-loom' version '1.18-SNAPSHOT'
     id 'maven-publish'
 }
 

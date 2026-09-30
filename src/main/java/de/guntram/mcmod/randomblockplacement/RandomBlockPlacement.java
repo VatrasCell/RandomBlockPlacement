@@ -20,7 +20,6 @@ import static com.mojang.brigadier.arguments.IntegerArgumentType.getInteger;
 import static com.mojang.brigadier.arguments.IntegerArgumentType.integer;
 import static net.fabricmc.fabric.api.client.command.v2.ClientCommands.argument;
 import static net.fabricmc.fabric.api.client.command.v2.ClientCommands.literal;
-import static org.lwjgl.glfw.GLFW.GLFW_KEY_R;
 
 public class RandomBlockPlacement implements ClientModInitializer {
     static final String MODID = "randomblockplacement";
@@ -43,7 +42,7 @@ public class RandomBlockPlacement implements ClientModInitializer {
 
     private void setKeyBindings() {
         final KeyMapping.Category category = KeyMapping.Category.register(Identifier.withDefaultNamespace("key.categories.randomblockplacement"));
-        KeyMappingHelper.registerKeyMapping(onOff = new KeyMapping("key.randomblockplacement.toggle", InputConstants.Type.KEYSYM, GLFW_KEY_R, category));
+        KeyMappingHelper.registerKeyMapping(onOff = new KeyMapping("key.randomblockplacement.toggle", InputConstants.Type.KEYBOARD, InputConstants.KEY_R, category));
         ClientTickEvents.END_CLIENT_TICK.register(e -> processKeyBinds());
     }
 
